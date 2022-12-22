@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>Home - Lakshan Kodithuwakku</title>
+        <link rel="shortcut icon" type="image/x-icon" href="images/icon.png"/>
         <link rel="stylesheet" type="text/css" href="style - Home.css">
 
          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
@@ -121,38 +122,40 @@
                         <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
                         <div class="text">
                             <h3>Phone</h3>
-                            <p>+94766511049</p>
+                            <p>+0000000000</p>
                         </div>
                     </div>
                     <div class="box">
                         <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
                         <div class="text">
                             <h3>Email</h3>
-                            <p>lakshankodithuwakku@gmail.com</p>
+                            <p>------@gmail.com</p>
                         </div>
                     </div>
                 </div>
                 <div class="contactForm">
-                    <form>
+                    <form action="mail.php" method="post" id="my-form">
                         <h2>Send Message</h2>
                         <div class="inputBox">
-                            <input type="text" name="" required="required">
+                            <input type="text" name="name" required="required">
                             <span>Full Name</span>
                         </div>
                         <div class="inputBox">
-                            <input type="text" name="" required="required">
+                            <input type="email" name="email" required="required">
                             <span>Email</span>
                         </div>
                         <div class="inputBox">
-                           <textarea required="required"></textarea>
+                           <textarea required="required" name="message"></textarea>
                             <span>Type your Message...</span>
                         </div>
                         <div class="inputBox">
                             <input type="submit" name="" value="Send">
                         </div>
+                        <div id="status" ></div>
                     </form>
                 </div>
             </div>
+            
         </section>
         <!--footer-->
         <footer>
@@ -181,6 +184,7 @@
     </div>
     <!--JQuery-->
     <script type="text/javascript" src="js/JQuery.js"></script>
+    <script type="text/javascript" src="js/email.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
         $('.toggle').click(function(){

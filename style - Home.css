@@ -19,13 +19,21 @@ section{
     background-size: cover;
     position: relative; 
 }
+
 nav{
+    overflow: visible; 
     display: flex;
+
+    position: fixed;
+    z-index: 2;
+    width: 90%;
+    
     justify-content: space-between;
     align-items: center;
     height: 60px;
+    
     background-color: #ffffff;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
     padding: 0px  5% ;
 }
 nav ul{
@@ -401,6 +409,40 @@ h3{
     font-size: 18px;
     border-radius: 20px;
 }
+
+#status{
+    width: 50%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin-left: 120px;
+    margin-top: -50px;
+    /*margin: 0 auto;*/
+    border-radius: 20px;
+}
+#status.success{
+    background-color: #00bcd4;
+    animation: status 4s ease forwards;
+}
+#status.error{
+    background-color: #e91e63;
+    color: white;
+    animation: status 4s ease forwards;
+}
+@keyframes status {
+    0%{
+        opacity: 1;
+        pointer-events: all;
+    }
+    90%{
+        opacity: 1;
+        pointer-events: all;
+    }
+    100%{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
 /*  */
 
 footer{
@@ -587,6 +629,10 @@ footer p:nth-child(2){
         transform: translate(-50%, -50%);
         width: 80%;
     }
+    /*nav{
+        width: 100%;
+        position: fixed;/* Set the navbar to fixed position */
+    /*} */
     nav ul{
         margin: 0px;
         padding: 0px;
